@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Flappy Bird</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="photo-bg"></div>
+        
+        <div class="clouds">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+        </div>
+
+        <div class="hearts" id="hearts"></div>
+
+        <div class="score" id="score">Score: 0</div>
+
+        <div class="bird" id="bird">🐦</div>
+        
+        <div class="ground"></div>
+        
+        <div class="finish-area" id="finishArea">
+            🎯<br>FINISH<br>🏆
+        </div>
+
+        <div class="fireworks" id="fireworks"></div>
+
+        <div class="start-screen" id="startScreen">
+            <h2>🎂 Birthday Flappy Bird 🎂</h2>
+            <div class="instructions">
+                <p>🐦 Klik untuk terbang, hindari pipa hijau!</p>
+                <p>💕 Capai finish untuk hadiah spesial!</p>
+            </div>
+            <button class="start-button" id="startBtn">🎉 Mulai Bermain! 🎉</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="game-over" id="gameOver">
+        <h2>💥 Game Over! 💥</h2>
+        <p id="finalScore">Score: 0</p>
+        <button class="start-button" onclick="resetGame()">🔄 Main Lagi</button>
+    </div>
+
+    <div class="gift-selection" id="giftSelection">
+        <h2>🎁 Selamat! Pilih Hadiah Spesial! 🎁</h2>
+        <div class="gift-options">
+            <button class="gift-item" onclick="selectGift('💍 Cincin Berlian')">💍 Cincin</button>
+            <button class="gift-item" onclick="selectGift('🌹 Buket Mawar')">🌹 Bunga</button>
+            <button class="gift-item" onclick="selectGift('💖 Cinta Abadi')">💖 Cinta</button>
+            <button class="gift-item" onclick="selectGift('🎂 Kue Ultah')">🎂 Kue</button>
+        </div>
+        <p>Kamu berhasil sampai finish!</p>
+    </div>
+
+    <div class="birthday-song" id="birthdaySong">
+        <h1>🎂 SELAMAT ULANG TAHUN! 🎂</h1>
+        <div class="song-text">
+            ♪ Selamat ulang tahun sayang<br>
+            ♪ Semoga bahagia selalu<br>
+            ♪ Panjang umur dan sehat<br>
+            ♪ Semua mimpi jadi nyata ♪<br>
+            ♪ Love you so much! ♪
+        </div>
+        <p id="selectedGift"></p>
+        <button class="start-button" onclick="resetGame()">🔄 Main Lagi</button>
+    </div>
+
+    <script src="script.js"></script>
+    <audio autoplay>
+        <source src = "DJ.mp3" type="audio/mp3"
+    </audio>
+</body>
+</html>
